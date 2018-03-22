@@ -1,3 +1,5 @@
+[image1]: ./p1.png
+
 ### Here I will consider the rubric points individually and describe how I addressed each point in my implementation.  
 
 ---
