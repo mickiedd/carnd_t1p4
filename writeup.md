@@ -20,7 +20,7 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [image1]: ./p1.png "Undistorted"
-[image2]: ./test_images/test1.jpg "Road Transformed"
+[image2]: ./p2.png "Binary image"
 [image3]: ./examples/binary_combo_example.jpg "Binary Example"
 [image4]: ./examples/warped_straight_lines.jpg "Warp Example"
 [image5]: ./examples/color_fit_lines.jpg "Fit Visual"
@@ -56,6 +56,8 @@ I then used the output `objpoints` and `imgpoints` to compute the camera calibra
 The code for this step is contained in the first code cell of the IPython notebook located in "./examples/example.ipynb" (or in lines # through # of the file called `some_file.py`).  
 
 I start by convert raw image from RGB channels to HLS channels, and with the l channel, I calculate the derivative in x by cv2.Sobel, and then I absolute x derivative to accentuate lines away from horizontal.Then I threshold x gradient and alose threshold color channel by the s channel.The default threash hold for these is (170, 255).At last I stack each channel together to make a combined binary image.
+
+![alt text][image2]
 
 #### 3. Apply a perspective transform to rectify binary image ("birds-eye view").
 
