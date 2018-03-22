@@ -82,7 +82,7 @@ The code for this step is contained in the 10st code cell of the IPython noteboo
 The equation for radius of curvature is:
 ![alt text][image5]
 
-First I calculate the center of the output image, and then I calculate the center of the boundary, at last I get the offset of these two center, that is the vehicle position with respect to center.
+First I calculate the center of the output image, and then I calculate the center of the boundary, at last I get the offset of these two center multiple by the factor that from pixels space to meters space, that is the vehicle position with respect to center.
 
 #### 6. Warp the detected lane boundaries back onto the original image.
 
@@ -173,4 +173,8 @@ Here's a [link to my video result](./output_video.mp4)
 
 #### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
-Here I'll talk about the approach I took, what techniques I used, what worked and why, where the pipeline might fail and how I might improve it if I were going to pursue this project further.  
+I don't find any solution of the position of the vehicle with repect to center, so I decide to think about it.
+Fisrt I need to calculate the factor of from pixels space to meters space, and then I need to know the center of the output image, and then I need to know the cetner of the boundry, at last I get the offset of x and that is the positon of the vehicle with respect to center.
+From these piplines, if I dont't calculate the factor first, the pipline will fail because the vehicle is not in the pixels space actually.
+
+When I try to find the source and destination points in the "birds-eye view" pipline above, at the begining I make the source points width same as the destination points, and the output image look not right, pipline failed. So I decided to change the destination points width to as the same as the output image width, and it look good.
