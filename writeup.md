@@ -82,6 +82,8 @@ The code for this step is contained in the 10st code cell of the IPython noteboo
 The equation for radius of curvature is:
 ![alt text][image5]
 
+First I calculate the center of the output image, and then I calculate the center of the boundary, at last I get the offset of these two center, that is the vehicle position with respect to center.
+
 #### 6. Warp the detected lane boundaries back onto the original image.
 
 The code for this step is contained in the 11st code cell of the IPython notebook located in "./p4.ipynb".  Here is an example of my result on a test image:
