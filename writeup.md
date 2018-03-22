@@ -1,4 +1,11 @@
 [image1]: ./p1.png
+[image1]: ./p2.png
+[image1]: ./p3.png
+[image1]: ./p4.png
+[image1]: ./p5.png
+[image1]: ./p6.png
+[image1]: ./p7.png
+[image1]: ./p8.png
 
 ### Here I will consider the rubric points individually and describe how I addressed each point in my implementation.  
 
