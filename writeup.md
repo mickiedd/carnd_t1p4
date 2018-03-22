@@ -21,7 +21,7 @@ The goals / steps of this project are the following:
 
 [image1]: ./p1.png "Undistorted"
 [image2]: ./p2.png "Binary image"
-[image3]: ./examples/binary_combo_example.jpg "Binary Example"
+[image3]: ./p3.png "Bird View Image"
 [image4]: ./examples/warped_straight_lines.jpg "Warp Example"
 [image5]: ./examples/color_fit_lines.jpg "Fit Visual"
 [image6]: ./examples/example_output.jpg "Output"
@@ -91,6 +91,7 @@ This resulted in the following source and destination points:
 
 I verified that my perspective transform was working as expected by drawing the `src` and `dst` points onto a test image and its warped counterpart to verify that the lines appear parallel in the warped image.
 
+![alt text][image3]
 
 ### Pipeline (single images)
 
