@@ -15,7 +15,7 @@
 
 #### 1. Compute the camera calibration matrix and distortion coefficients given a set of chessboard images.Apply a distortion correction to raw images.
 
-The code for this step is contained in the first code cell of the IPython notebook located in "./examples/example.ipynb" (or in lines # through # of the file called `some_file.py`).  
+The code for this step is contained in the first code cell of the IPython notebook located in "./p4.ipynb" .  
 
 I start by preparing "object points", which will be the (x, y, z) coordinates of the chessboard corners in the world. Here I am assuming the chessboard is fixed on the (x, y) plane at z=0, such that the object points are the same for each calibration image.  Thus, `objp` is just a replicated array of coordinates, and `objpoints` will be appended with a copy of it every time I successfully detect all chessboard corners in a test image.  `imgpoints` will be appended with the (x, y) pixel position of each of the corners in the image plane with each successful chessboard detection.  
 
@@ -25,7 +25,7 @@ I then used the output `objpoints` and `imgpoints` to compute the camera calibra
 
 #### 2. Use color transforms, gradients, etc., to create a thresholded binary image.
 
-The code for this step is contained in the first code cell of the IPython notebook located in "./examples/example.ipynb" (or in lines # through # of the file called `some_file.py`).  
+The code for this step is contained in the 15st code cell of the IPython notebook located in "./p4.ipynb".  
 
 I start by convert the undistored image from RGB channels to HLS channels, and with the l channel, I calculate the derivative in x by cv2.Sobel, and then I absolute x derivative to accentuate lines away from horizontal.Then I threshold x gradient and alose threshold color channel by the s channel.The default threash hold for these is (170, 255).At last I stack each channel together to make a combined binary image.
 
@@ -33,7 +33,7 @@ I start by convert the undistored image from RGB channels to HLS channels, and w
 
 #### 3. Apply a perspective transform to rectify binary image ("birds-eye view").
 
-The code for my perspective transform includes a function called `warper()`, which appears in lines 1 through 8 in the file `example.py` (output_images/examples/example.py) (or, for example, in the 3rd code cell of the IPython notebook).  The `warper()` function takes as inputs an image (`img`), as well as source (`src`) and destination (`dst`) points.  I chose the hardcode the source and destination points in the following manner:
+The code for this step is contained in the 16st code cell of the IPython notebook located in "./p4.ipynb". I chose the hardcode the source and destination points in the following manner:
 
 ```python
 # transform matrix
@@ -69,7 +69,7 @@ I verified that my perspective transform was working as expected by drawing the 
 
 #### 4. Detect lane pixels and fit to find the lane boundary.
 
-The code for this step is contained in the first code cell of the IPython notebook located in "./examples/example.ipynb" (or in lines # through # of the file called `some_file.py`).  
+The code for this step is contained in the 22st and 23st code cells of the IPython notebook located in "./p4.ipynb".
 
 I start by take a historgram of the bottom half of the warped binary image.Then I try to find the peak of the left and right halves of the histogram, I can use that as a starting point for where to search for the lines, from that point I can use a sliding window, placed around the line centers, to find and follow the lines up to the top of the frame and identify the x and y positions of all nonzero pixels in the image.After generated all the nonezero pixels in the lists, I concatenate the arrays of indices, and extract left and right line pixels positions to fit a second order polynomial to each line.
 
@@ -77,14 +77,14 @@ I start by take a historgram of the bottom half of the warped binary image.Then 
 
 #### 5. Determine the curvature of the lane and vehicle position with respect to center.
 
-The code for this step is contained in the first code cell of the IPython notebook located in "./examples/example.ipynb" (or in lines # through # of the file called `some_file.py`).  
+The code for this step is contained in the 10st code cell of the IPython notebook located in "./p4.ipynb".
 
 The equation for radius of curvature is:
 ![alt text][image5]
 
 #### 6. Warp the detected lane boundaries back onto the original image.
 
-I implemented this step in lines # through # in my code in `yet_another_file.py` in the function `map_lane()`.  Here is an example of my result on a test image:
+The code for this step is contained in the 11st code cell of the IPython notebook located in "./p4.ipynb".  Here is an example of my result on a test image:
 
 ![alt text][image6]
 
@@ -105,7 +105,7 @@ I used a combination of color and gradient thresholds to generate a binary image
 
 #### 3. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
 
-The code for my perspective transform includes a function called `warper()`, which appears in lines 1 through 8 in the file `example.py` (output_images/examples/example.py) (or, for example, in the 3rd code cell of the IPython notebook).  The `warper()` function takes as inputs an image (`img`), as well as source (`src`) and destination (`dst`) points.  I chose the hardcode the source and destination points in the following manner:
+The code for this step is contained in the 16st code cell of the IPython notebook located in "./p4.ipynb". I chose the hardcode the source and destination points in the following manner:
 
 ```python
 # transform matrix
