@@ -23,7 +23,7 @@ The goals / steps of this project are the following:
 [image2]: ./p2.png "Binary image"
 [image3]: ./p3.png "Bird View Image"
 [image4]: ./p4.png "Binary Bird View Image"
-[image5]: ./examples/color_fit_lines.jpg "Fit Visual"
+[image5]: ./p5.png "Radius equation"
 [image6]: ./examples/example_output.jpg "Output"
 [video1]: ./project_video.mp4 "Video"
 
@@ -95,12 +95,19 @@ I verified that my perspective transform was working as expected by drawing the 
 
 ![alt text][image4]
 
-#### 4. Detect lane pixels and fit to find the lane boundary..
+#### 4. Detect lane pixels and fit to find the lane boundary.
 
 The code for this step is contained in the first code cell of the IPython notebook located in "./examples/example.ipynb" (or in lines # through # of the file called `some_file.py`).  
 
+I start by take a historgram of the bottom half of the warped binary image.Then I try to find the peak of the left and right halves of the histogram, I can use that as a starting point for where to search for the lines, from that point I can use a sliding window, placed around the line centers, to find and follow the lines up to the top of the frame and identify the x and y positions of all nonzero pixels in the image.After generated all the nonezero pixels in the lists, I concatenate the arrays of indices, and extract left and right line pixels positions to fit a second order polynomial to each line.
 
 
+#### 5. Determine the curvature of the lane and vehicle position with respect to center.
+
+The code for this step is contained in the first code cell of the IPython notebook located in "./examples/example.ipynb" (or in lines # through # of the file called `some_file.py`).  
+
+The equation for radius of curvature is:
+![alt text][image5]
 
 ### Pipeline (single images)
 
