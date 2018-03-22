@@ -51,6 +51,19 @@ I then used the output `objpoints` and `imgpoints` to compute the camera calibra
 
 ![alt text][image1]
 
+#### 2. Use color transforms, gradients, etc., to create a thresholded binary image.
+
+The code for this step is contained in the first code cell of the IPython notebook located in "./examples/example.ipynb" (or in lines # through # of the file called `some_file.py`).  
+
+I start by convert raw image from RGB channels to HLS channels, and with the l channel, I calculate the derivative in x by cv2.Sobel, and then I absolute x derivative to accentuate lines away from horizontal.Then I threshold x gradient and alose threshold color channel by the s channel.The default threash hold for these is (170, 255).At last I stack each channel together to make a combined binary image.
+
+#### 3. Apply a perspective transform to rectify binary image ("birds-eye view").
+
+The code for this step is contained in the first code cell of the IPython notebook located in "./examples/example.ipynb" (or in lines # through # of the file called `some_file.py`).  
+
+
+
+
 ### Pipeline (single images)
 
 #### 1. Provide an example of a distortion-corrected image.
