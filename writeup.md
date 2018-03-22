@@ -25,7 +25,8 @@ The goals / steps of this project are the following:
 [image4]: ./p4.png "Binary Bird View Image"
 [image5]: ./p5.png "Radius equation"
 [image6]: ./p6.png "Plot boundaries back onto RAW image"
-[video1]: ./project_video.mp4 "Video"
+[image7]: ./p7.png "Histogram"
+[video1]: ./output_video.mp4 "Video"
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/571/view) Points
 
@@ -101,6 +102,7 @@ The code for this step is contained in the first code cell of the IPython notebo
 
 I start by take a historgram of the bottom half of the warped binary image.Then I try to find the peak of the left and right halves of the histogram, I can use that as a starting point for where to search for the lines, from that point I can use a sliding window, placed around the line centers, to find and follow the lines up to the top of the frame and identify the x and y positions of all nonzero pixels in the image.After generated all the nonezero pixels in the lists, I concatenate the arrays of indices, and extract left and right line pixels positions to fit a second order polynomial to each line.
 
+![alt text][image7]
 
 #### 5. Determine the curvature of the lane and vehicle position with respect to center.
 
