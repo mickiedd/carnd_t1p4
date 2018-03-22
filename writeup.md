@@ -103,7 +103,7 @@ The code for this step is contained in the first code cell of the IPython notebo
 
 I start by take a historgram of the bottom half of the warped binary image.Then I try to find the peak of the left and right halves of the histogram, I can use that as a starting point for where to search for the lines, from that point I can use a sliding window, placed around the line centers, to find and follow the lines up to the top of the frame and identify the x and y positions of all nonzero pixels in the image.After generated all the nonezero pixels in the lists, I concatenate the arrays of indices, and extract left and right line pixels positions to fit a second order polynomial to each line.
 
-![alt text][image7]![alt text][image1]
+![alt text][image7]![alt text][image8]
 
 #### 5. Determine the curvature of the lane and vehicle position with respect to center.
 
