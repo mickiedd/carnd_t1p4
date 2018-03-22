@@ -24,7 +24,7 @@ The goals / steps of this project are the following:
 [image3]: ./p3.png "Bird View Image"
 [image4]: ./p4.png "Binary Bird View Image"
 [image5]: ./p5.png "Radius equation"
-[image6]: ./examples/example_output.jpg "Output"
+[image6]: ./p6.png "Plot boundaries back onto RAW image"
 [video1]: ./project_video.mp4 "Video"
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/571/view) Points
@@ -108,6 +108,14 @@ The code for this step is contained in the first code cell of the IPython notebo
 
 The equation for radius of curvature is:
 ![alt text][image5]
+
+#### 6. Warp the detected lane boundaries back onto the original image.
+
+I implemented this step in lines # through # in my code in `yet_another_file.py` in the function `map_lane()`.  Here is an example of my result on a test image:
+
+![alt text][image6]
+
+
 
 ### Pipeline (single images)
 
