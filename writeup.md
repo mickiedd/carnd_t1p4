@@ -61,9 +61,35 @@ I start by convert the undistored image from RGB channels to HLS channels, and w
 
 #### 3. Apply a perspective transform to rectify binary image ("birds-eye view").
 
-The code for this step is contained in the first code cell of the IPython notebook located in "./examples/example.ipynb" (or in lines # through # of the file called `some_file.py`).  
+The code for my perspective transform includes a function called `warper()`, which appears in lines 1 through 8 in the file `example.py` (output_images/examples/example.py) (or, for example, in the 3rd code cell of the IPython notebook).  The `warper()` function takes as inputs an image (`img`), as well as source (`src`) and destination (`dst`) points.  I chose the hardcode the source and destination points in the following manner:
 
+```python
+# transform matrix
+src = np.float32([
+    [680 + 32, 447],
+    [1105 + 200, 720],
+    [206 - 200, 720],
+    [602 - 32, 447]
+])
+dst = np.float32(
+    [
+        [1280, 0],
+        [1280, 720],
+        [0, 720],
+        [0, 0],
+    ])
+```
 
+This resulted in the following source and destination points:
+
+| Source        | Destination   | 
+|:-------------:|:-------------:| 
+| 585, 460      | 320, 0        | 
+| 203, 720      | 320, 720      |
+| 1127, 720     | 960, 720      |
+| 695, 460      | 960, 0        |
+
+I verified that my perspective transform was working as expected by drawing the `src` and `dst` points onto a test image and its warped counterpart to verify that the lines appear parallel in the warped image.
 
 
 ### Pipeline (single images)
