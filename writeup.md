@@ -22,7 +22,7 @@ The goals / steps of this project are the following:
 [image1]: ./p1.png "Undistorted"
 [image2]: ./p2.png "Binary image"
 [image3]: ./p3.png "Bird View Image"
-[image4]: ./examples/warped_straight_lines.jpg "Warp Example"
+[image4]: ./p4.png "Binary Bird View Image"
 [image5]: ./examples/color_fit_lines.jpg "Fit Visual"
 [image6]: ./examples/example_output.jpg "Output"
 [video1]: ./project_video.mp4 "Video"
@@ -92,6 +92,15 @@ This resulted in the following source and destination points:
 I verified that my perspective transform was working as expected by drawing the `src` and `dst` points onto a test image and its warped counterpart to verify that the lines appear parallel in the warped image.
 
 ![alt text][image3]
+
+![alt text][image4]
+
+#### 4. Detect lane pixels and fit to find the lane boundary..
+
+The code for this step is contained in the first code cell of the IPython notebook located in "./examples/example.ipynb" (or in lines # through # of the file called `some_file.py`).  
+
+
+
 
 ### Pipeline (single images)
 
