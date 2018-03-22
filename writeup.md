@@ -139,6 +139,10 @@ I verified that my perspective transform was working as expected by drawing the 
 
 #### 4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
 
+When I got a warped binary image
+
+The code for this step is contained in the 22st code cell of the IPython notebook located in "./p4.ipynb". 
+
 Then I did some other stuff and fit my lane lines with a 2nd order polynomial kinda like this:
 
 ![alt text][image5]
