@@ -38,15 +38,15 @@ The code for this step is contained in the 15st code cell of the IPython noteboo
 ```python
 # transform matrix
 src = np.float32([
-    [680 + 32, 447],
-    [1105 + 200, 720],
-    [206 - 200, 720],
-    [602 - 32, 447]
+    [700, 447],
+    [1305, 720],
+    [6, 720],
+    [580, 447]
 ])
 dst = np.float32(
     [
-        [1280, 0],
-        [1280, 720],
+        [1080, 0],
+        [1080, 720],
         [0, 720],
         [0, 0],
     ])
@@ -56,10 +56,10 @@ This resulted in the following source and destination points:
 
 | Source        | Destination   | 
 |:-------------:|:-------------:| 
-| 712, 447      | 1280, 0        | 
-| 1305, 720      | 1280, 720      |
+| 700, 447      | 1080, 0        | 
+| 1305, 720      | 1080, 720      |
 | 6, 720     | 0, 720      |
-| 570, 447      | 0, 0        |
+| 580, 447      | 0, 0        |
 
 I verified that my perspective transform was working as expected by drawing the `src` and `dst` points onto a test image and its warped counterpart to verify that the lines appear parallel in the warped image.
 
@@ -86,7 +86,7 @@ First I calculate the center of the output image, and then I calculate the cente
 
 #### 6. Warp the detected lane boundaries back onto the original image.
 
-The code for this step is contained in the 11st code cell of the IPython notebook located in "./p4.ipynb".  Here is an example of my result on a test image:
+The code for this step is contained in the 10st code cell of the IPython notebook located in "./p4.ipynb".  Here is an example of my result on a test image:
 
 ![alt text][image6]
 
@@ -107,20 +107,20 @@ I used a combination of color and gradient thresholds to generate a binary image
 
 #### 3. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
 
-The code for this step is contained in the 16st code cell of the IPython notebook located in "./p4.ipynb". I chose the hardcode the source and destination points in the following manner:
+The code for this step is contained in the 15st code cell of the IPython notebook located in "./p4.ipynb". I chose the hardcode the source and destination points in the following manner:
 
 ```python
 # transform matrix
 src = np.float32([
-    [680 + 32, 447],
-    [1105 + 200, 720],
-    [206 - 200, 720],
-    [602 - 32, 447]
+    [700, 447],
+    [1305, 720],
+    [6, 720],
+    [580, 447]
 ])
 dst = np.float32(
     [
-        [1280, 0],
-        [1280, 720],
+        [1080, 0],
+        [1080, 720],
         [0, 720],
         [0, 0],
     ])
@@ -130,10 +130,10 @@ This resulted in the following source and destination points:
 
 | Source        | Destination   | 
 |:-------------:|:-------------:| 
-| 712, 447      | 1280, 0        | 
-| 1305, 720      | 1280, 720      |
+| 700, 447      | 1080, 0        | 
+| 1305, 720      | 1080, 720      |
 | 6, 720     | 0, 720      |
-| 570, 447      | 0, 0        |
+| 580, 447      | 0, 0        |
 
 I verified that my perspective transform was working as expected by drawing the `src` and `dst` points onto a test image and its warped counterpart to verify that the lines appear parallel in the warped image.
 
@@ -143,7 +143,7 @@ I verified that my perspective transform was working as expected by drawing the 
 
 When I got a warped binary image
 
-The code for this step is contained in the 22st code cell of the IPython notebook located in "./p4.ipynb". 
+The code for this step is contained in the 21st code cell of the IPython notebook located in "./p4.ipynb". 
 
 Then I did some other stuff and fit my lane lines with a 2nd order polynomial kinda like this:
 
@@ -151,11 +151,11 @@ Then I did some other stuff and fit my lane lines with a 2nd order polynomial ki
 
 #### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 
-The code for this step is contained in the 10st code cell of the IPython notebook located in "./p4.ipynb". 
+The code for this step is contained in the 9st code cell of the IPython notebook located in "./p4.ipynb". 
 
 #### 6. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
 
-The code for this step is contained in the 11st code cell of the IPython notebook located in "./p4.ipynb".  Here is an example of my result on a test image:
+The code for this step is contained in the 10st code cell of the IPython notebook located in "./p4.ipynb".  Here is an example of my result on a test image:
 
 ![alt text][image6]
 
